@@ -1,0 +1,67 @@
+//
+// typography
+//
+
+// variables
+$GOLDEN_RATIO:            1.618;
+
+$base-font-size:          100% !default;
+$base-line-height:        150% !default;
+$em-base:                 16px !default;
+
+$serif-font-family:       "Georgia", "Times", serif !default;
+$sans-serif-font-family:  "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !default;
+
+$headings-font-family:    $sans-serif-font-family;
+$body-font-family:        $sans-serif-font-family;
+
+
+// body typography
+body {
+  color: #222;
+  font-family: $body-font-family;
+}
+
+// headings
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 0.75rem;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: 4.5rem;
+}
+
+h2 {
+  font-size: 3.5rem;
+}
+
+h3 {
+  font-size: 2.25rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+
+}
+
+// paragraph text
+p {
+  margin: 0 0 0.75rem;
+  font-family: inherit;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+
+  &.lead {
+    font-size: 1.5rem;
+    line-height: 1.33;
+  }
+}
