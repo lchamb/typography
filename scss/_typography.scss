@@ -27,6 +27,7 @@ $body-font-family:        $sans-serif-font-family;
 
 $text-color:              #20202e;
 $text-accent-color:       #bc131a;
+$text-muted-color:        #889;
 
 html,
 body {
@@ -102,6 +103,28 @@ ol {
       margin-left: 1rem;
       list-style: none;
     }
+  }
+}
+
+// blockquotes
+blockquote {
+  position: relative;
+  margin: 1rem 1rem 0.75rem 3rem;
+
+  p {
+    font-size: $base-font-size * $scale;
+    line-height: 1.33;
+  }
+
+  &:before {
+    content: "“";
+    display: block;
+    position: absolute;
+    top: -1rem;
+    left: -3rem;
+    color: $text-muted-color;
+    font-size: 5rem;
+    line-height: 1;
   }
 }
 

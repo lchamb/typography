@@ -24,3 +24,9 @@ section {
 
   @include clearfix;
 }
+
+footer {
+  height: 150px;
+  
+  @include clearfix;
+}
