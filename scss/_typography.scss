@@ -2,66 +2,79 @@
 // typography
 //
 
-// variables
+// famous ratios
+$PERFECT_FOURTH:          (4/3);
+$PERFECT_FIFTH:           (3/2);
 $GOLDEN_RATIO:            1.618;
+// ... add your ratio here
+// http://en.wikipedia.org/wiki/Golden_ratio
+
+$scale:                   $PERFECT_FIFTH;
 
 $base-font-size:          100% !default;
 $base-line-height:        150% !default;
-$em-base:                 16px !default;
+$rem-base:                16px !default;
 
+// every font is different
+// scales that look good with one font will not look good with another
+// pls experiment
 $serif-font-family:       "Georgia", "Times", serif !default;
-$sans-serif-font-family:  "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif !default;
+$sans-serif-font-family:  "Helvetica Neue", "Helvetica", Arial, sans-serif !default;
 
 $headings-font-family:    $sans-serif-font-family;
 $body-font-family:        $sans-serif-font-family;
 
+$text-color:              #20202e;
+
+html,
+body {
+  font-size: 100%;
+
+  // prevents ios safari from zooming on orientation change (maybe)
+  // -webkit-text-size-adjust: none;
+}
 
 // body typography
 body {
-  color: #222;
+  color: $text-color;
   font-family: $body-font-family;
 }
 
 // headings
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0 0 0.75rem;
+  font-family: $headings-font-family;
   line-height: 1.1;
 }
 
-h1 {
-  font-size: 4.5rem;
-}
-
-h2 {
-  font-size: 3.5rem;
-}
-
-h3 {
-  font-size: 2.25rem;
-}
-
-h4 {
-  font-size: 1.5rem;
-}
-
-h5 {
-  font-size: 1rem;
-}
-
-h6 {
-
-}
+// typography scale
+h1 { font-size: $base-font-size * $scale * $scale * $scale * $scale; }
+h2 { font-size: $base-font-size * $scale * $scale * $scale; }
+h3 { font-size: $base-font-size * $scale * $scale; }
+h4 { font-size: $base-font-size * $scale; }
+h5 { font-size: $base-font-size; }
+h6 { font-size: $base-font-size; }
 
 // paragraph text
 p {
   margin: 0 0 0.75rem;
   font-family: inherit;
-  font-size: 1rem;
+  font-size: $base-font-size;
   font-weight: normal;
   line-height: 1.5;
 
   &.lead {
-    font-size: 1.5rem;
+    font-size: $base-font-size * $scale;
     line-height: 1.33;
   }
 }
+
+// utility classes
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }

@@ -8,6 +8,12 @@ $global-margin:     20px;
 // mixins
 
 // base classes
+html,
+body {
+  height: 100%;
+  padding: 1rem 0.5rem;
+}
+
 section {
   margin: 0 0 $global-margin;
 }

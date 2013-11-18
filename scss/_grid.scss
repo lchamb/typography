@@ -8,6 +8,7 @@ $grid-width: 940px;
 
 // grid classes
 .row {
-  width: $grid-width;
+  width: 100%;
+  max-width: $grid-width;
   margin: 0 auto;
 }

@@ -338,42 +338,70 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+html,
+body {
+  height: 100%;
+  padding: 1rem 0.5rem; }
+
 section {
   margin: 0 0 20px; }
 
 .row {
-  width: 940px;
+  width: 100%;
+  max-width: 940px;
   margin: 0 auto; }
 
+html,
 body {
-  color: #222;
-  font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
+  font-size: 100%; }
 
-h1, h2, h3, h4, h5, h6 {
+body {
+  color: #20202e;
+  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0 0 0.75rem;
+  font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
   line-height: 1.1; }
 
 h1 {
-  font-size: 4.5rem; }
+  font-size: 506.25%; }
 
 h2 {
-  font-size: 3.5rem; }
+  font-size: 337.5%; }
 
 h3 {
-  font-size: 2.25rem; }
+  font-size: 225%; }
 
 h4 {
-  font-size: 1.5rem; }
+  font-size: 150%; }
 
 h5 {
-  font-size: 1rem; }
+  font-size: 100%; }
+
+h6 {
+  font-size: 100%; }
 
 p {
   margin: 0 0 0.75rem;
   font-family: inherit;
-  font-size: 1rem;
+  font-size: 100%;
   font-weight: normal;
   line-height: 1.5; }
   p.lead {
-    font-size: 1.5rem;
+    font-size: 150%;
     line-height: 1.33; }
+
+.text-left {
+  text-align: left; }
+
+.text-center {
+  text-align: center; }
+
+.text-right {
+  text-align: right; }
