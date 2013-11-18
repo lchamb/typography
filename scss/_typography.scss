@@ -29,6 +29,11 @@ $text-color:              #20202e;
 $text-accent-color:       #bc131a;
 $text-muted-color:        #889;
 
+// media queries
+// use your site's breakpoints
+$small:                   640px;
+
+
 html,
 body {
   //font-size: 100%;
@@ -57,12 +62,7 @@ h6 {
 
 // typographic scale for headings
 // built based on your scale
-h1 { font-size: $base-font-size * $scale * $scale * $scale * $scale; }
-h2 { font-size: $base-font-size * $scale * $scale * $scale; }
-h3 { font-size: $base-font-size * $scale * $scale; }
-h4 { font-size: $base-font-size * $scale; }
-h5 { font-size: $base-font-size; }
-h6 { font-size: $base-font-size; }
+h6 { color: $text-muted-color; }
 
 // paragraph text
 p {
@@ -73,7 +73,7 @@ p {
   line-height: $base-line-height;
 
   &.lead {
-    font-size: $base-font-size * $scale;
+    font-size: $base-font-size * $scale * 0.85;
     line-height: 1.33;
   }
 }
@@ -112,8 +112,7 @@ blockquote {
   margin: 1rem 1rem 0.75rem 3rem;
 
   p {
-    font-size: $base-font-size * $scale;
-    line-height: 1.33;
+    @extend .lead;
   }
 
   &:before {
@@ -132,3 +131,19 @@ blockquote {
 .text-left { text-align: left; }
 .text-center { text-align: center; }
 .text-right { text-align: right; }
+
+// media queries
+// your small-screen breakpoint
+// use your own breakpoints here
+@media only screen and (min-width: #{$small + 1px}) {
+  h1 { font-size: $base-font-size * $scale * $scale * $scale * $scale; }
+  h2 { font-size: $base-font-size * $scale * $scale * $scale; }
+  h3 { font-size: $base-font-size * $scale * $scale; }
+  h4 { font-size: $base-font-size * $scale; }
+  h5 { font-size: $base-font-size; }
+  h6 { font-size: $base-font-size; }
+
+  p.lead {
+    font-size: $base-font-size * $scale;
+  }
+}

@@ -386,23 +386,8 @@ h6 {
   font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
   line-height: 1.1; }
 
-h1 {
-  font-size: 506.25%; }
-
-h2 {
-  font-size: 337.5%; }
-
-h3 {
-  font-size: 225%; }
-
-h4 {
-  font-size: 150%; }
-
-h5 {
-  font-size: 100%; }
-
 h6 {
-  font-size: 100%; }
+  color: #888899; }
 
 p {
   margin: 0 0 0.75rem;
@@ -410,8 +395,8 @@ p {
   font-size: 100%;
   font-weight: normal;
   line-height: 150%; }
-  p.lead {
-    font-size: 150%;
+  p.lead, blockquote p {
+    font-size: 127.5%;
     line-height: 1.33; }
 
 ul li,
@@ -437,9 +422,6 @@ ol.inline {
 blockquote {
   position: relative;
   margin: 1rem 1rem 0.75rem 3rem; }
-  blockquote p {
-    font-size: 150%;
-    line-height: 1.33; }
   blockquote:before {
     content: "“";
     display: block;
@@ -458,3 +440,25 @@ blockquote {
 
 .text-right {
   text-align: right; }
+
+@media only screen and (min-width: 641px) {
+  h1 {
+    font-size: 506.25%; }
+
+  h2 {
+    font-size: 337.5%; }
+
+  h3 {
+    font-size: 225%; }
+
+  h4 {
+    font-size: 150%; }
+
+  h5 {
+    font-size: 100%; }
+
+  h6 {
+    font-size: 100%; }
+
+  p.lead, blockquote p {
+    font-size: 150%; } }
