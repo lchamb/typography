@@ -9,6 +9,7 @@ $GOLDEN_RATIO:            1.618;
 // ... add your ratio here
 // http://en.wikipedia.org/wiki/Golden_ratio
 
+// set your ratio here
 $scale:                   $PERFECT_FIFTH;
 
 $base-font-size:          100% !default;
@@ -25,10 +26,11 @@ $headings-font-family:    $sans-serif-font-family;
 $body-font-family:        $sans-serif-font-family;
 
 $text-color:              #20202e;
+$text-accent-color:       #bc131a;
 
 html,
 body {
-  font-size: 100%;
+  //font-size: 100%;
 
   // prevents ios safari from zooming on orientation change (maybe)
   // -webkit-text-size-adjust: none;
@@ -52,7 +54,8 @@ h6 {
   line-height: 1.1;
 }
 
-// typography scale
+// typographic scale for headings
+// built based on your scale
 h1 { font-size: $base-font-size * $scale * $scale * $scale * $scale; }
 h2 { font-size: $base-font-size * $scale * $scale * $scale; }
 h3 { font-size: $base-font-size * $scale * $scale; }
@@ -66,11 +69,39 @@ p {
   font-family: inherit;
   font-size: $base-font-size;
   font-weight: normal;
-  line-height: 1.5;
+  line-height: $base-line-height;
 
   &.lead {
     font-size: $base-font-size * $scale;
     line-height: 1.33;
+  }
+}
+
+// lists
+ul,
+ol {
+
+  li {
+    line-height: $base-line-height;
+  }
+
+  &.unstyled {
+    padding: 0;
+    list-style: none;
+  }
+
+  &.inline {
+    margin: 0 1rem 0.75rem -1rem;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    
+    & > li {
+      display: block;
+      float: left;
+      margin-left: 1rem;
+      list-style: none;
+    }
   }
 }
 

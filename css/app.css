@@ -344,16 +344,18 @@ body {
   padding: 1rem 0.5rem; }
 
 section {
-  margin: 0 0 20px; }
+  margin: 0 0 20px;
+  *zoom: 1; }
+  section:before, section:after {
+    content: " ";
+    display: table; }
+  section:after {
+    clear: both; }
 
 .row {
   width: 100%;
   max-width: 940px;
   margin: 0 auto; }
-
-html,
-body {
-  font-size: 100%; }
 
 body {
   color: #20202e;
@@ -392,10 +394,30 @@ p {
   font-family: inherit;
   font-size: 100%;
   font-weight: normal;
-  line-height: 1.5; }
+  line-height: 150%; }
   p.lead {
     font-size: 150%;
     line-height: 1.33; }
+
+ul li,
+ol li {
+  line-height: 150%; }
+ul.unstyled,
+ol.unstyled {
+  padding: 0;
+  list-style: none; }
+ul.inline,
+ol.inline {
+  margin: 0 1rem 0.75rem -1rem;
+  padding: 0;
+  list-style: none;
+  overflow: hidden; }
+  ul.inline > li,
+  ol.inline > li {
+    display: block;
+    float: left;
+    margin-left: 1rem;
+    list-style: none; }
 
 .text-left {
   text-align: left; }
