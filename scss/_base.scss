@@ -21,12 +21,18 @@ body {
 
 section {
   margin: 0 0 $global-margin;
+  padding: 0 0 $global-margin;
 
   @include clearfix;
 }
 
+header {
+  margin: 0 0 3rem;
+  text-align: center;
+}
+
 footer {
   height: 150px;
-  
+
   @include clearfix;
 }

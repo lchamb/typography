@@ -346,12 +346,17 @@ body {
 
 section {
   margin: 0 0 20px;
+  padding: 0 0 20px;
   *zoom: 1; }
   section:before, section:after {
     content: " ";
     display: table; }
   section:after {
     clear: both; }
+
+header {
+  margin: 0 0 3rem;
+  text-align: center; }
 
 footer {
   height: 150px;
