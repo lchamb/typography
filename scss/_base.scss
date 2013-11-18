@@ -6,6 +6,11 @@
 $global-margin:     20px;
 
 // mixins
+@mixin clearfix {
+  *zoom:1;
+  &:before, &:after { content: " "; display: table; }
+  &:after { clear: both; }
+}
 
 // base classes
 html,
@@ -16,4 +21,6 @@ body {
 
 section {
   margin: 0 0 $global-margin;
+
+  @include clearfix;
 }
