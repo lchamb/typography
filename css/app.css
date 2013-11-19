@@ -392,11 +392,12 @@ h6 {
 p {
   margin: 0 0 0.75rem;
   font-family: inherit;
-  font-size: 100%;
+  font-size: 1rem;
   font-weight: normal;
   line-height: 150%; }
   p.lead, blockquote p {
-    font-size: 127.5%;
+    font-size: 1.275rem;
+    font-weight: 300;
     line-height: 1.33; }
 
 ul,
@@ -423,7 +424,7 @@ ol {
       list-style: none; }
 
 dl {
-  margin: 0 0 1rem;
+  margin: 0 0 0.75rem;
   line-height: 150%; }
 
 dt {
@@ -434,7 +435,7 @@ dd {
 
 blockquote {
   position: relative;
-  margin: 1rem 1rem 0.75rem 3rem; }
+  margin: 1.5rem 1rem 1.5rem 3rem; }
   blockquote:before {
     content: "“";
     display: block;
@@ -454,24 +455,30 @@ blockquote {
 .text-right {
   text-align: right; }
 
+.text-accent {
+  color: #bc131a; }
+
+.text-muted {
+  color: #888899; }
+
 @media only screen and (min-width: 641px) {
   h1 {
-    font-size: 506.25%; }
+    font-size: 5.0625rem; }
 
   h2 {
-    font-size: 337.5%; }
+    font-size: 3.375rem; }
 
   h3 {
-    font-size: 225%; }
+    font-size: 2.25rem; }
 
   h4 {
-    font-size: 150%; }
+    font-size: 1.5rem; }
 
   h5 {
-    font-size: 100%; }
+    font-size: 1rem; }
 
   h6 {
-    font-size: 100%; }
+    font-size: 1rem; }
 
   p.lead, blockquote p {
-    font-size: 150%; } }
+    font-size: 1.5rem; } }

@@ -16,6 +16,8 @@ $base-font-size:          100% !default;
 $base-line-height:        150% !default;
 $rem-base:                16px !default;
 
+$paragraph-margin:        0.75rem;
+
 // every font is different
 // scales that look good with one font will not look good with another
 // pls experiment
@@ -55,7 +57,7 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0 0 0.75rem;
+  margin: 0 0 $paragraph-margin;
   font-family: $headings-font-family;
   line-height: 1.1;
 }
@@ -66,14 +68,15 @@ h6 { color: $text-muted-color; }
 
 // paragraph text
 p {
-  margin: 0 0 0.75rem;
+  margin: 0 0 $paragraph-margin;
   font-family: inherit;
-  font-size: $base-font-size;
+  font-size: 1rem;
   font-weight: normal;
   line-height: $base-line-height;
 
   &.lead {
-    font-size: $base-font-size * $scale * 0.85;
+    font-size: 1rem * $scale * 0.85;
+    font-weight: 300;
     line-height: 1.33;
   }
 }
@@ -93,7 +96,7 @@ ol {
   }
 
   &.inline {
-    margin: 0 1rem 0.75rem -1rem;
+    margin: 0 1rem $paragraph-margin -1rem;
     padding: 0;
     list-style: none;
     overflow: hidden;
@@ -108,7 +111,7 @@ ol {
 }
 
 dl {
-  margin: 0 0 1rem;
+  margin: 0 0 $paragraph-margin;
   line-height: $base-line-height;
 }
 
@@ -123,7 +126,7 @@ dd {
 // blockquotes
 blockquote {
   position: relative;
-  margin: 1rem 1rem 0.75rem 3rem;
+  margin: 1.5rem 1rem 1.5rem 3rem;
 
   p {
     @extend .lead;
@@ -146,18 +149,21 @@ blockquote {
 .text-center { text-align: center; }
 .text-right { text-align: right; }
 
+.text-accent { color: $text-accent-color; }
+.text-muted { color: $text-muted-color; }
+
 // media queries
 // your small-screen breakpoint
 // use your own breakpoints here
 @media only screen and (min-width: #{$small + 1px}) {
-  h1 { font-size: $base-font-size * $scale * $scale * $scale * $scale; }
-  h2 { font-size: $base-font-size * $scale * $scale * $scale; }
-  h3 { font-size: $base-font-size * $scale * $scale; }
-  h4 { font-size: $base-font-size * $scale; }
-  h5 { font-size: $base-font-size; }
-  h6 { font-size: $base-font-size; }
+  h1 { font-size: 1rem * $scale * $scale * $scale * $scale; }
+  h2 { font-size: 1rem * $scale * $scale * $scale; }
+  h3 { font-size: 1rem * $scale * $scale; }
+  h4 { font-size: 1rem * $scale; }
+  h5 { font-size: 1rem; }
+  h6 { font-size: 1rem; }
 
   p.lead {
-    font-size: $base-font-size * $scale;
+    font-size: 1rem * $scale;
   }
 }
