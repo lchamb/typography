@@ -399,25 +399,38 @@ p {
     font-size: 127.5%;
     line-height: 1.33; }
 
-ul li,
-ol li {
-  line-height: 150%; }
-ul.unstyled,
-ol.unstyled {
-  padding: 0;
-  list-style: none; }
-ul.inline,
-ol.inline {
-  margin: 0 1rem 0.75rem -1rem;
-  padding: 0;
-  list-style: none;
-  overflow: hidden; }
-  ul.inline > li,
-  ol.inline > li {
-    display: block;
-    float: left;
-    margin-left: 1rem;
+ul,
+ol {
+  padding-left: 1.5rem; }
+  ul li,
+  ol li {
+    line-height: 150%; }
+  ul.unstyled,
+  ol.unstyled {
+    padding: 0;
     list-style: none; }
+  ul.inline,
+  ol.inline {
+    margin: 0 1rem 0.75rem -1rem;
+    padding: 0;
+    list-style: none;
+    overflow: hidden; }
+    ul.inline > li,
+    ol.inline > li {
+      display: block;
+      float: left;
+      margin-left: 1rem;
+      list-style: none; }
+
+dl {
+  margin: 0 0 1rem;
+  line-height: 150%; }
+
+dt {
+  font-weight: bold; }
+
+dd {
+  margin: 0 0 0.5rem; }
 
 blockquote {
   position: relative;

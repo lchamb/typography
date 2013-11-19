@@ -81,6 +81,7 @@ p {
 // lists
 ul,
 ol {
+  padding-left: 1.5rem;
 
   li {
     line-height: $base-line-height;
@@ -104,6 +105,19 @@ ol {
       list-style: none;
     }
   }
+}
+
+dl {
+  margin: 0 0 1rem;
+  line-height: $base-line-height;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin: 0 0 0.5rem;
 }
 
 // blockquotes
