@@ -373,7 +373,7 @@ footer {
   margin: 0 auto; }
 
 body {
-  color: #20202e;
+  color: #232330;
   font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif; }
 
 h1,
@@ -383,6 +383,7 @@ h4,
 h5,
 h6 {
   margin: 0 0 0.75rem;
+  color: #20202e;
   font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
   line-height: 1.1; }
 
@@ -397,7 +398,6 @@ p {
   line-height: 150%; }
   p.lead, blockquote p {
     font-size: 1.275rem;
-    font-weight: 300;
     line-height: 1.33; }
 
 ul,

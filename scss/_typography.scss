@@ -27,7 +27,8 @@ $sans-serif-font-family:  "Helvetica Neue", "Helvetica", Arial, sans-serif !defa
 $headings-font-family:    $sans-serif-font-family;
 $body-font-family:        $sans-serif-font-family;
 
-$text-color:              #20202e;
+$heading-text-color:      #20202e;
+$body-text-color:         #232330;
 $text-accent-color:       #bc131a;
 $text-muted-color:        #889;
 
@@ -46,7 +47,7 @@ body {
 
 // body typography
 body {
-  color: $text-color;
+  color: $body-text-color;
   font-family: $body-font-family;
 }
 
@@ -58,6 +59,7 @@ h4,
 h5,
 h6 {
   margin: 0 0 $paragraph-margin;
+  color: $heading-text-color;
   font-family: $headings-font-family;
   line-height: 1.1;
 }
@@ -76,7 +78,6 @@ p {
 
   &.lead {
     font-size: 1rem * $scale * 0.85;
-    font-weight: 300;
     line-height: 1.33;
   }
 }
